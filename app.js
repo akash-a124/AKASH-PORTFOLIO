@@ -1,6 +1,4 @@
-// ------------------------------
-// Hacker / Terminal themed script
-// ------------------------------
+
 
 const term = document.getElementById('term');
 const cmdline = document.getElementById('cmdline');
@@ -99,3 +97,4 @@ function escapeHtml(txt) {
 // focus and mobile tweaks
 cmdline.focus();
 cmdline.innerText = '';
+
