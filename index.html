@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AKASH.A-CYBERSECURITY RESERCHER</title>
+  <meta name="description" content="Hacker/terminal themed web page template" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="matrix" aria-hidden="true"></div>
+  <div class="overlay" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <div class="card" role="main">
+
+      <section class="left">
+        <h1 class="glow" data-text="AKASH">AKASH.A-CYBERSECURITY RESERCHER</h1>
+        <p class="lead">Cybersecurity professional with expertise in penetration testing, vulnerability assessments, network security, and
+incident response, skilled in using advanced tools and methodologies to detect, analyze, and mitigate security threats.
+Strong passion for continuous learning and enhancing cybersecurity defenses.</p>
+
+        <h1 class="glow" style="color:#0dd55d; text-decoration: underline;">TOOLS USED</h1>
+        <div class="chips">
+          <span class="chip">kali linux</span>
+          <span class="chip">wireshark</span>
+          <span class="chip">nmap</span>
+          <span class="chip">metaspoit</span>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <p class="meta">Last scan <span class="hex">0xA3F2</span> — status: <strong>secure</strong></p>
+
+        <div class="controls">
+          <button class="btn" onclick="typeCmd('help')">help</button>
+          <button class="btn ghost" onclick="typeCmd('whoami')">whoami</button>
+          <button class="btn" onclick="typeCmd('projects')">projects</button>
+        </div>
+
+        <div class="contacts" aria-label="contact links">
+          <a href="mailto:akashanoo124@gmail.com" target="_blank" rel="noopener">✉︎ Email</a> ·
+          <a href="https://github.com/akash-a124" target="_blank" rel="noopener">GitHub</a> ·
+          <a href="https://linkedin.com/in/akash-a-820640370" target="_blank" rel="noopener">LinkedIn</a> ·
+          
+        </div>
+
+      </section>
+
+      <aside class="terminal" aria-label="Terminal window">
+        <div class="term-header">
+          <div class="dots">
+            <span class="dot close"></span>
+            <span class="dot min"></span>
+            <span class="dot max"></span>
+          </div>
+          <div style="flex:1; text-align:center; font-size:12px; opacity:0.9">ssh user@anonymous</div>
+        </div>
+
+        <div id="term" class="term-body" tabindex="0">
+          <div class="term-line">Connecting to remote host...</div>
+          <div class="term-line">Authentication: <span class="hex">0x7f12</span> OK</div>
+          <div class="term-line">Type <span class="hex">help</span> for a list of commands.</div>
+        </div>
+
+        <div style="display:flex; gap:8px; align-items:center; margin-top:6px">
+          <div class="prompt">user@lair:~$</div>
+          <div class="cmd" id="cmdline" contenteditable="true" role="textbox" aria-label="Type command here" spellcheck="false"></div>
+          <div class="cursor" id="cursor" aria-hidden="true"></div>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

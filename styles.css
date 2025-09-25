@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: monospace, 'Courier New', Courier;
+  background: rgb(16, 16, 16);
+  color: #00ff99;
+  overflow: hidden;
+}
+
+/* Matrix background */
+.matrix {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, #001100, black 90%);
+  z-index: -2;
+}
+
+/* Overlay scan lines */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 255, 0, 0.05),
+    rgba(0, 255, 0, 0.05) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  background: rgba(0, 20, 0, 0.85);
+  border: 1px solid #0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 1000px;
+  width: 100%;
+  gap: 1rem;
+  backdrop-filter: blur(4px);
+}
+
+.left {
+  flex: 1;
+}
+
+.glow {
+  font-size: 2rem;
+  color: #0f0;
+  text-shadow: 0 0 8px #0f0, 0 0 20px #0f0;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  background-color: #222; /* Dark background */
+  color: #08b93d;         /* Matrix green text */
+  padding: 6px 14px;
+  border-radius: 16px;
+  margin: 2px;
+  display: inline-block;
+  font-size: 14px;
+  text-decoration: none;  /* Remove underline */
+}
+
+.meta {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.btn {
+  background: rgb(22, 39, 193);
+  color: rgb(11, 11, 16);
+  border: none;
+  padding: 4px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgb(86, 27, 197);
+  color: rgb(37, 60, 211);
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* Terminal styling */
+.terminal {
+  width: 400px;
+  background: rgb(7, 6, 6);
+  border: 1px solid #0f0;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.term-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.dots {
+  display: flex;
+  gap: 4px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.close { background: #f33; }
+.dot.min { background: #fc3; }
+.dot.max { background: rgb(16, 225, 79); }
+
+.term-body {
+  flex: 1;
+  background: #001100;
+  padding: 6px;
+  border-radius: 4px;
+  overflow-y: auto;
+}
+
+.term-line {
+  margin-bottom: 2px;
+}
+
+.prompt {
+  color: #0f0;
+}
+
+.cmd {
+  flex: 1;
+  min-height: 1em;
+  outline: none;
+  white-space: pre-wrap;
+}
+
+.cursor {
+  width: 8px;
+  height: 1em;
+  background: #0f0;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+.contacts {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.contacts a {
+  color: #0f0;
+  text-decoration: none;
+}
+
+.contacts a:hover {
+  text-decoration: underline;
+}
